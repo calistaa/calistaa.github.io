@@ -1,0 +1,32 @@
+#intro {
+  text-align: center;
+  background: rgba(255,255,255);
+  padding: 40px;
+}
+
+#intro .jumbotron {
+  background-color: rgba(250,250,250,0);
+  max-width: 500px;
+  padding: 40px;
+  margin: 0 auto;
+}
+
+@media (min-width: 300px) {
+  #intro .jumbotron {
+    padding: 40px;
+  }
+}
+
+@media (min-width: 300px) {
+  #intro {
+    padding: 20px;
+  }
+}
+
+.row {
+  padding-left: 40px;
+  padding-right: 40px;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
