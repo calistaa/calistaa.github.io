@@ -1,0 +1,49 @@
+:root { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #f8fafc; background: #07111f; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: radial-gradient(circle at top, #172554 0, #07111f 42%, #030712 100%); }
+button { font: inherit; }
+.app { width: min(720px, 100%); margin: 0 auto; padding: 20px 16px 48px; }
+header { display: flex; justify-content: space-between; gap: 16px; align-items: start; margin-bottom: 18px; }
+h1 { margin: 0; font-size: clamp(1.8rem, 7vw, 3rem); line-height: .95; letter-spacing: -.04em; }
+.subtitle { margin: 8px 0 0; color: #a5b4fc; }
+.badge { padding: 7px 10px; border-radius: 999px; background: rgba(99,102,241,.16); color: #c7d2fe; font-size: .8rem; white-space: nowrap; }
+.card { background: rgba(15,23,42,.82); border: 1px solid rgba(148,163,184,.18); box-shadow: 0 18px 60px rgba(0,0,0,.25); border-radius: 22px; overflow: hidden; margin-bottom: 16px; backdrop-filter: blur(12px); }
+.card-body { padding: 18px; }
+.step-title { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom: 12px; }
+.step-title h2 { margin:0; font-size:1.15rem; }
+.progress { color:#94a3b8; font-size:.88rem; }
+.camera-wrap { position:relative; aspect-ratio: 1 / 1; background:#020617; overflow:hidden; }
+video { width:100%; height:100%; object-fit:cover; display:block; }
+.guide { position:absolute; width:72%; aspect-ratio:1; left:14%; top:14%; display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(3,1fr); border:3px solid rgba(255,255,255,.92); border-radius:12px; box-shadow:0 0 0 999px rgba(2,6,23,.32); pointer-events:none; }
+.guide span { border:1px solid rgba(255,255,255,.6); }
+.orientation { position:absolute; top:10px; left:50%; transform:translateX(-50%); background:rgba(2,6,23,.78); padding:7px 11px; border-radius:999px; font-size:.78rem; white-space:nowrap; }
+.controls { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px; }
+button { border:0; border-radius:14px; padding:13px 14px; cursor:pointer; font-weight:750; transition:transform .15s, opacity .15s; }
+button:active { transform:scale(.98); }
+button:disabled { opacity:.45; cursor:not-allowed; }
+.primary { background:#818cf8; color:#0b1020; }
+.secondary { background:#1e293b; color:#f8fafc; border:1px solid #334155; }
+.danger { background:#3f1d2a; color:#fecdd3; }
+.instructions { color:#cbd5e1; line-height:1.5; margin:0; }
+.faces { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.face-card { background:#0b1220; border:1px solid #273449; padding:10px; border-radius:14px; }
+.face-label { display:flex; justify-content:space-between; margin-bottom:7px; font-size:.8rem; color:#cbd5e1; }
+.mini-grid, .edit-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:4px; }
+.sticker { aspect-ratio:1; border-radius:5px; border:2px solid rgba(255,255,255,.28); min-width:0; padding:0; }
+.editor { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+.editor .face-card { padding:12px; }
+.editor .sticker { border-radius:7px; }
+.notice { padding:12px 14px; border-radius:13px; margin-top:12px; line-height:1.4; }
+.notice.info { background:#172554; color:#dbeafe; }
+.notice.error { background:#451a2b; color:#ffe4e6; }
+.notice.success { background:#052e2b; color:#ccfbf1; }
+.solution { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+.move { background:#1e293b; border:1px solid #475569; color:#f8fafc; padding:9px 12px; border-radius:11px; font-weight:800; }
+.move.active { outline:3px solid #818cf8; background:#312e81; }
+.move-detail { text-align:center; padding:20px; background:#0b1220; border-radius:18px; margin-top:14px; }
+.move-big { font-size:4rem; font-weight:900; line-height:1; }
+.move-text { color:#cbd5e1; margin-top:8px; }
+.hidden { display:none !important; }
+canvas { display:none; }
+footer { color:#64748b; text-align:center; font-size:.8rem; padding-top:8px; }
+@media (max-width:520px){ .editor{grid-template-columns:repeat(2,1fr)} .faces{grid-template-columns:repeat(2,1fr)} }
